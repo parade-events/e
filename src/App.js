@@ -54,7 +54,6 @@ const App = () => (
           {/*  If we're at WEBROOT */}
           <Route exact path="/e/" component={Home} />
 
-
           {/* If we see WEBROOT/e/####### */}
           <Route path="/e/:eventID" component={EventContainer} />
 
