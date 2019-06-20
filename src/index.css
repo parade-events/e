@@ -1,0 +1,49 @@
+
+
+a , a:hover{
+  color: #fff
+}
+
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+#wrapper {
+  display: flex;
+}
+
+#left {
+  flex: 0 0 30%;
+  background-color: "#F0EDF8";
+  text-align: center;
+ 
+}
+
+@media (orientation:portrait) {
+  #left {
+     display: none;
+  }
+}
+
+.dlButton {
+  width: 25%;
+  height: auto;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.icon {
+  width: 250px;
+  height: 250px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+#right {
+  flex: 1;
+}
+
+body, html, #root  {
+  height: 100%;
+}
