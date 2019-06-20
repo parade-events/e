@@ -7,4 +7,4 @@ Parade's mobile applications provide the ability to share events via uris struct
 React app to display event details, and also provide the ability to quickly jump into the full-fledged app (or download it from its respective store).
 
 Example from staging: https://parade.events/e/5b7ea7fdeabd7789f679bf00
->>>>>>> 52767aa6a05db9eeb87726d3699fce8f19a702bf
+
