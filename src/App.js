@@ -52,7 +52,7 @@ const App = () => (
         <div id="right">
 
           {/*  If we're at WEBROOT */}
-          <Route exact path="/" component={Home} />
+          <Route exact path="/e/" component={Home} />
 
 
           {/* If we see WEBROOT/e/####### */}
