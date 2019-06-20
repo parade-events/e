@@ -45,15 +45,7 @@ const App = () => (
             </div>
           </div>
 
-
-
-
-
-
-
-
           <p>Download for free today.</p>
-
 
         </div>
 

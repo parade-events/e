@@ -1,9 +1,9 @@
 {
-  "name": "react-graphql",
+  "name": "parade-web",
   "version": "0.1.0",
   "private": true,
-  "author": "@soorajchandran",
-  "homepage": "http://parade-events.github.io/e",
+  "author": "joshspicer",
+  "homepage": "https://parade.events/e",
   "dependencies": {
     "apollo-boost": "^0.1.4",
     "bootstrap": "^4.1.0",

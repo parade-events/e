@@ -51,9 +51,7 @@ class EventContainer extends React.Component {
             return <p>No event with that id! </p>
           }
           // All good.
-          console.log(data);
           return (
-
             <EventUI {...data.eventNoAuth} />
 
           );
