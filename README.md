@@ -1,24 +1,10 @@
-## GraphQL Demo in React
+# e
+View Parade events from the web!
 
-```
-git clone git@github.com:SoorajChandran/react-graphql-demo.git
 
-cd react-graphql-demo
+Parade's mobile applications provide the ability to share events via uris structured like `http://parade.events/e/<ID>`. 
 
-yarn && yarn start
-```
+React app to display event details, and also provide the ability to quickly jump into the full-fledged app (or download it from its respective store).
 
-### Linting
-
-```
-yarn lint
-```
-
-### Formatting using prettier
-
-```
-yarn format
-```
-
-[Live demo](http://soorajchandran.me/react-graphql-demo)
-
+Example from staging: https://parade.events/e/5b7ea7fdeabd7789f679bf00
+>>>>>>> 52767aa6a05db9eeb87726d3699fce8f19a702bf
