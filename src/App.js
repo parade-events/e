@@ -5,10 +5,8 @@ import EventContainer from './EventContainer'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Home from './Home'
 
-// import Home from './Home'
-
 const client = new ApolloClient({
-  uri: 'http://localhost:8080/graphql',
+  uri: 'https://aws-lambda-staging.parade.events/graphql',
 })
 
 

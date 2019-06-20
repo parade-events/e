@@ -21,8 +21,7 @@ class EventUI extends React.Component {
 
                 <p>{fullDescrip}</p>
 
-                <br></br><br></br>
-                <p>..........Download Parade for the best experience!</p>
+
             </div>
         )
     }
