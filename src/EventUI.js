@@ -2,6 +2,8 @@
 import React from 'react'
 import moment from 'moment'
 import _ from 'lodash'
+import AutoFitImage from 'react-image-autofit-frame';
+import CalendarIcon from './CalendarIcon'
 
 class EventUI extends React.Component {
 
@@ -10,35 +12,53 @@ class EventUI extends React.Component {
         const title = _.get(this.props, 'title')
         const startTime = _.get(this.props, 'startTime')
         const orgName = _.get(this.props, 'organization.name')
+        const location = _.get(this.props, 'location')
         const fullDescrip = _.get(this.props, 'description.full')
+        const tags = _.get(this.props, 'tags')
+
 
         return (
             <div style={styles.eventCard}>
-                <img style={styles.profileImg} src={imageUrl} />
-                <h1>{title}</h1>
-                <h4>Start: {moment(startTime).format('MMMM Do h:mm a')}</h4>
-                <h5>Hosted by: {orgName}</h5>
+                <AutoFitImage frameWidth="80%" frameHeight="40%" imgSrc={imageUrl} style={styles.profileImg} />
 
+                <div style={styles.titleLine}>
+                    <CalendarIcon date={startTime} />
+                    <div style={styles.titleOrgGroup}>
+                        <h3 style={styles.title}>{title}</h3>
+                        <h5>{orgName}</h5>
+                    </div>
+                </div>
+
+                <h5>Start: {moment(startTime).format('MMMM Do h:mm a')}</h5>
+                <h5>{location}</ h5>
                 <p>{fullDescrip}</p>
 
-
-            </div>
+            </div >
         )
     }
 }
 
 const styles = {
-    profileImg: {
-        height: '60%',
-        width: '60%',
-        borderRadius: '.5em',
+    titleOrgGroup: {
+        paddingLeft: '10px',
+        lineHeight: '0%',
+    },
+    titleLine: {
+        paddingTop: '10px',
         display: 'flex',
-        textAlign: 'center',
+        margin: '10px'
 
     },
+    title: {
+        fontWeight: 'bold',
+        alignSelf: 'center',
+    },
+    profileImg: {},
     eventCard: {
         padding: 10,
         height: '100%',
+        width: '100%',
+        flex: 1,
     }
 };
 

@@ -4,6 +4,7 @@ import { ApolloProvider } from 'react-apollo'
 import EventContainer from './EventContainer'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Home from './Home'
+import Header from './Header'
 
 const client = new ApolloClient({
   uri: 'https://aws-lambda-staging.parade.events/graphql',
@@ -12,18 +13,16 @@ const client = new ApolloClient({
 
 const App = () => (
   <Router>
+    <Header />
     <ApolloProvider client={client}>
-
       <div style={styles.wrapper} id="wrapper" >
-
-
         <div style={styles.leftPanel} id="left">
 
           <div class="stickLeft">
             <div class="firstPanelHeading">
 
               <div class='logoAndName'>
-                <img class='icon' alt="Parade elephant blue logo" src=' /assets/RoundedIcon.png' />
+                <img class='icon' alt="Parade elephant blue logo" src='https://parade.events/assets/web1.png' />
 
               </div>
             </div>
@@ -69,7 +68,7 @@ const styles = {
   leftPanel: {
     width: '40%',
     // height: '100%',
-    backgroundColor: '#47a2cf'
+    backgroundColor: '#c3c9cc'
   },
   wrapper: {
     height: '100%',
