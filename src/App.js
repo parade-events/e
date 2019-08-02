@@ -7,7 +7,7 @@ import Home from './Home'
 import Header from './Header'
 
 const client = new ApolloClient({
-  uri: 'https://aws-lambda-staging.parade.events/graphql',
+  uri: 'https://aws-lambda.parade.events/graphql',
 })
 
 
