@@ -28,7 +28,6 @@ query evtQuery($id: ID) {
   }
 }`
 
-
 class EventContainer extends React.Component {
 
   render() {
@@ -48,7 +47,7 @@ class EventContainer extends React.Component {
         {({ loading, error, data }) => {
           if (loading) return <p>Loading, please wait....</p>
           if (error) {
-            return <p>No event with that id! </p>
+            return <p style={{ padding: 10 }}>No event with that id - Check out all our events on iOS and Android! </p>
           }
           // All good.
           return (

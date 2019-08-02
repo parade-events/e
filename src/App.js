@@ -10,54 +10,17 @@ const client = new ApolloClient({
   uri: 'https://aws-lambda.parade.events/graphql',
 })
 
-
 const App = () => (
   <Router>
     <Header />
     <ApolloProvider client={client}>
       <div style={styles.wrapper} id="wrapper" >
-        <div style={styles.leftPanel} id="left">
 
-          <div class="stickLeft">
-            <div class="firstPanelHeading">
+        {/*  If we're at WEBROOT */}
+        <Route exact path="/e/" component={Home} />
 
-              <div class='logoAndName'>
-                <img class='icon' alt="Parade elephant blue logo" src='https://parade.events/assets/web1.png' />
-
-              </div>
-            </div>
-            <p class="firstPanelBody">
-              Northeastern has <strong>hundreds</strong> of events each week.
-                         <br></br>Discover them with Parade.
-            </p>
-            <div class="appDownloadButtons">
-              <a href="https://itunes.apple.com/us/app/parade-events/id1380171412">
-                <img
-                  class="dlButton"
-                  src='/assets/app-store-badge.svg' />
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=com.parade">
-                <img
-                  class="dlButton"
-                  src='/assets/play-store-badge.png' />
-              </a>
-            </div>
-          </div>
-
-          <p>Download for free today.</p>
-
-        </div>
-
-        <div id="right">
-
-          {/*  If we're at WEBROOT */}
-          <Route exact path="/e/" component={Home} />
-
-          {/* If we see WEBROOT/e/####### */}
-          <Route path="/e/:eventID" component={EventContainer} />
-
-
-        </div>
+        {/* If we see WEBROOT/e/####### */}
+        <Route path="/e/:eventID" component={EventContainer} />
       </div>
     </ApolloProvider >
   </Router >

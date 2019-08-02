@@ -16,7 +16,6 @@ class EventUI extends React.Component {
         const fullDescrip = _.get(this.props, 'description.full')
         const tags = _.get(this.props, 'tags')
 
-
         return (
             <div style={styles.eventCard}>
                 <AutoFitImage frameWidth="80%" frameHeight="40%" imgSrc={imageUrl} style={styles.profileImg} />
@@ -32,6 +31,8 @@ class EventUI extends React.Component {
                 <h5>Start: {moment(startTime).format('MMMM Do h:mm a')}</h5>
                 <h5>{location}</ h5>
                 <p>{fullDescrip}</p>
+
+                <p style={{ fontStyle: 'italic', paddingTop: 15 }}>Download our mobile app to create your personalized Parade profile, RSVP to this event, and explore hundreds more orgs and events!</p>
 
             </div >
         )

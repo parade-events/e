@@ -14,11 +14,13 @@ class Header extends React.Component {
                 <a href="https://parade.events/">
                     <img style={styles.img} src={'https://parade.events/assets/parade_font_white.png'} />
                 </a>
+                <a href="https://parade.events/">
                 <div style={styles.menuItems}>
                     Get App
                 <div style={styles.emoji}>
                         📲</div>
                 </div>
+                </a>
 
             </div >
         )
