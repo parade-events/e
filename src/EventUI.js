@@ -32,7 +32,7 @@ class EventUI extends React.Component {
                 <h5>{location}</ h5>
                 <p>{fullDescrip}</p>
 
-                <p style={{ fontStyle: 'italic', paddingTop: 15 }}>Download our mobile app to create your personalized Parade profile, RSVP to this event, and explore hundreds more orgs and events!</p>
+                <p style={{ fontStyle: 'italic', paddingTop: 15 }}>Download our <a style={{color: '#46A2CF' }} href="https://parade.events/">mobile app</a> to create your personalized Parade profile, RSVP to this event, and explore hundreds more orgs and events!</p>
 
             </div >
         )
