@@ -2,7 +2,7 @@ import React from 'react'
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
 import EventContainer from './EventContainer'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, HashRouter } from 'react-router-dom'
 import Home from './Home'
 import Header from './Header'
 
@@ -11,7 +11,7 @@ const client = new ApolloClient({
 })
 
 const App = () => (
-  <Router>
+  <Router >
     <Header />
     <ApolloProvider client={client}>
       <div style={styles.wrapper} id="wrapper" >
@@ -21,12 +21,15 @@ const App = () => (
 
         {/* If we see WEBROOT/e/####### */}
         <Route path="/e/:eventID" component={EventContainer} />
+
+        {/* Default */}
+        <Route component={Home} />
+
       </div>
     </ApolloProvider >
   </Router >
 
 )
-
 const styles = {
   leftPanel: {
     width: '40%',
