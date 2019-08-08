@@ -22,9 +22,6 @@ const App = () => (
         {/* If we see WEBROOT/e/####### */}
         <Route path="/e/:eventID" component={EventContainer} />
 
-        {/* Default */}
-        <Route component={Home} />
-
       </div>
     </ApolloProvider >
   </Router >
