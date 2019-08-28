@@ -5,6 +5,9 @@
   "author": "joshspicer",
   "homepage": "https://parade.events/e",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.22",
+    "@fortawesome/free-regular-svg-icons": "^5.10.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "apollo-boost": "^0.1.4",
     "bootstrap": "^4.1.0",
     "create-react-class": "^15.6.3",
