@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": "joshspicer",
-  "homepage": "https://parade.events/e",
+  "homepage": "https://parade.events/o",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
     "@fortawesome/free-regular-svg-icons": "^5.10.2",
@@ -37,7 +37,8 @@
   },
   "scripts": {
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
+    "deploy-event": "gh-pages -d build",
+    "deploy-org": "gh-pages -d build -o org",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
