@@ -26,11 +26,11 @@ class CalendarIcon extends React.Component {
 
 const styles = {
     dayOfTheWeekStyle: {
-        paddingTop: 3,
+        paddingTop: '1px',
         fontWeight: '500',
         fontStyle: 'normal',
         color: '#47a2cf',
-        fontSize: 25,
+        fontSize: 20,
         textAlign: 'center',
         paddingBottom: '0px'
     },
@@ -39,15 +39,16 @@ const styles = {
         borderStyle: 'solid',
         borderWidth: 0.8,
         borderColor: '#000',
-        height: 100,
-        width: 100,
+        height: 90,
+        width: 90,
     },
     dayStyle: {
         fontWeight: '500',
         fontStyle: 'normal',
         color: '#000',
-        fontSize: 50,
-        textAlign: 'center'
+        fontSize: 45,
+        textAlign: 'center',
+        marginBottom: '2px'
 
 
     },

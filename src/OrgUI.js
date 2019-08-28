@@ -6,10 +6,19 @@ import AutoFitImage from 'react-image-autofit-frame';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
+const MaybeImage = (props) => {
+    console.log(props.imageUrl)
+    if (props.imageUrl && props.imageUrl != "") {
+        return (<AutoFitImage frameWidth="30%" frameHeight="30%" imgSrc={props.imageUrl} style={styles.profileImg} />)
+    }
+
+    return null;
+}
+
 class EventUI extends React.Component {
 
     render() {
-        const avatarUrl = _.get(this.props, 'avatarUrl')
+        const imageUrl = _.get(this.props, 'avatarUrl')
         const email = _.get(this.props, 'contact.email')
         const username = _.get(this.props, 'username')
         const name = _.get(this.props, 'name')
@@ -17,7 +26,7 @@ class EventUI extends React.Component {
 
         return (
             <div style={styles.eventCard}>
-                <AutoFitImage frameWidth="30%" frameHeight="30%" imgSrc={avatarUrl} style={styles.profileImg} />
+                <MaybeImage imageUrl={imageUrl} style={styles.profileImg} />
 
                 <div style={styles.titleOrgGroup}>
                     <h2 style={styles.title}>{name}</h2>

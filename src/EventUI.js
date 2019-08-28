@@ -5,6 +5,16 @@ import _ from 'lodash'
 import AutoFitImage from 'react-image-autofit-frame';
 import CalendarIcon from './CalendarIcon'
 
+const MaybeImage = (props) => {
+    console.log(props.imageUrl)
+    if (props.imageUrl && props.imageUrl != "") {
+        return (<AutoFitImage frameWidth="80%" frameHeight="40%" imgSrc={props.imageUrl} style={props.style} />)
+    }
+
+    return null;
+}
+
+
 class EventUI extends React.Component {
 
     render() {
@@ -18,7 +28,8 @@ class EventUI extends React.Component {
 
         return (
             <div style={styles.eventCard}>
-                <AutoFitImage frameWidth="80%" frameHeight="40%" imgSrc={imageUrl} style={styles.profileImg} />
+
+                <MaybeImage imageUrl={imageUrl} style={styles.profileImg} />
 
                 <div style={styles.titleLine}>
                     <CalendarIcon date={startTime} />
