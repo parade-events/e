@@ -9,9 +9,8 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 const MaybeImage = (props) => {
     console.log(props.imageUrl)
     if (props.imageUrl && props.imageUrl != "") {
-        return (<AutoFitImage frameWidth="30%" frameHeight="30%" imgSrc={props.imageUrl} style={styles.profileImg} />)
+        return (<AutoFitImage frameWidth="20%" frameHeight="20%" imgSrc={props.imageUrl} style={styles.profileImg} />)
     }
-
     return null;
 }
 
